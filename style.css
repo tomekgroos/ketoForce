@@ -23,13 +23,17 @@ html header, body header {
   margin: 0;
 }
 
-html header h1, body header h1 {
+html header .logo-box, body header .logo-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-top: 25px;
-  font-family: 'Spantaran';
-  text-align: center;
-  font-size: 6rem;
-  color: #4814A0;
-  background-color: rgba(255, 255, 255, 0.3);
 }
 
 html header p, body header p {
@@ -55,8 +59,6 @@ html nav ul, body nav ul {
       -ms-flex-pack: center;
           justify-content: center;
   height: 10%;
-  color: #6E65C2;
-  background: rgba(72, 20, 160, 0.8);
   list-style-type: none;
   font-size: 1.5rem;
 }
@@ -65,12 +67,12 @@ html nav ul li, body nav ul li {
   padding-left: 0;
   -webkit-transform: translateY(25%);
           transform: translateY(25%);
-  width: 15%;
+  width: 20%;
   text-align: center;
   font-weight: bold;
   letter-spacing: 5px;
-  text-shadow: 2px 2px 2px black;
-  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  color: #6E65C2;
   cursor: pointer;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -82,7 +84,7 @@ html nav ul li:hover, body nav ul li:hover {
 }
 
 section {
-  font-family: 'Nunito-Light';
+  font-family: 'Varela Round';
 }
 
 section .video-container {
@@ -93,32 +95,49 @@ section .video-container video {
   width: 100%;
 }
 
-section .overlay {
-  position: relative;
-  left: 30;
-  top: -450;
+section .about {
+  height: 100vh;
+  background-image: url("img/bluza.jpg");
+  background-size: cover;
 }
 
-section .overlay p {
-  color: white;
-  font-size: 2.5rem;
-  font-weight: bold;
+#about {
+  margin-top: 170px;
+  color: #6E65C2;
+  text-align: center;
+}
+
+#about h1 {
+  font-family: 'Nunito-Light';
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 4rem;
+  text-shadow: 1px 2px 3px #4814A0;
+}
+
+#about h2 {
+  font-size: 2rem;
 }
 
 @media screen and (max-width: 768px) {
   html {
     font-size: 65%;
   }
-  header nav ul {
-    margin-left: -40px;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    height: 5rem;
+  .logo-box img {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
   }
   header nav ul li {
-    width: 25%;
     letter-spacing: 0px;
+    margin-left: 20px;
     text-align: center;
   }
 }
