@@ -19,39 +19,54 @@
 $mainColor: #4814A0;
 $secondColor: #6E65C2;
 
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @mixin screenDim {
+    max-height: 100%;
+    max-width: 100%;
+  }
 
 
 
 html, body{
     margin: 0 auto;
     padding: 0;
-    background: url('img/ketoBurger.jpg');
-    background-position: 50% 45%;
+    background-position: 50% 35%;
     
 
 header{
-
-    h1{
-       
+        font-family: 'Spantaran';
+        margin:0;
+     
+    h1{     
         padding-top: 25px;
-        padding-bottom: 25px;
+ 
         font-family: 'Spantaran';
         text-align: center;
         font-size: 6rem;
         color: $mainColor;
         background-color: rgba(255, 255, 255, 0.3);
-      
+}
+p{
+    display: inline-block;
+    position: relative;
+    top:-100;
 }
     }
     nav{
-        position: relative;
-        top: -65px;
+        
         width: 100%;
         font-family: 'Nunito-Light';
         ul{
+            margin-left:-65px;
+            margin-bottom: 0;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: center;
             height: 10%;
             color: $secondColor;
             background: rgba(72, 20, 160, 0.8);
@@ -59,7 +74,8 @@ header{
             font-size: 1.5rem;
             
             li{ 
-              padding-top: 1.5rem;
+              padding-left: 0;
+              transform: translateY(25%);
               width: 15%;
               text-align: center;
               font-weight: bold;
@@ -69,8 +85,8 @@ header{
               cursor: pointer;
               transition: 0.5s;
               &:hover{
-                  background-color: white;
-                  color: $mainColor;
+                  
+                  transform: translateY(5%);
               }
             }
         }
@@ -82,18 +98,43 @@ header{
 
 section {
     font-family: 'Nunito-Light';
-    .video-bg{
-    height: 55%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    p{
-        color: white;
-        font-size: 4rem;
-        text-transform: uppercase;
-        font-weight: bold;
-        text-shadow: 3px 3px 10px black;;
+    .video-container{
+        height: 100vh;
+        video{
+           width: 100%;
+        }
     }
-   
+    .overlay{
+        position: relative;
+        left: 30;
+        top: -450;
+        
+        p{
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+            
+        }
+        
     }
+}
+
+@media screen and (max-width: 768px){
+    html{
+        font-size: 65%;
+}
+    header nav{
+       ul{
+          margin-left: -40px;
+           justify-content: flex-start;
+        height: 5rem;
+           li{
+            width: 25%;
+            letter-spacing: 0px;
+               
+               text-align: center;
+           }
+       } 
+    }
+
 }
