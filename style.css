@@ -26,13 +26,12 @@ html header h1, body header h1 {
   text-align: center;
   font-size: 6rem;
   color: #4814A0;
-  /* margin-top: 1rem; */
   background-color: rgba(255, 255, 255, 0.3);
 }
 
 html nav, body nav {
   position: relative;
-  top: -70px;
+  top: -65px;
   width: 100%;
   font-family: 'Nunito-Light';
 }
@@ -56,9 +55,16 @@ html nav ul li, body nav ul li {
   padding-top: 1.5rem;
   width: 15%;
   text-align: center;
-  font-weight: bold;
   text-shadow: 2px 2px 2px black;
   color: white;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+html nav ul li:hover, body nav ul li:hover {
+  background-color: white;
+  color: #4814A0;
 }
 
 section {
