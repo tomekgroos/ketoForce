@@ -237,6 +237,32 @@ section .video-container video {
   font-size: 2rem;
 }
 
+.up-button {
+  background: url("/img/up.png");
+  background-color: black;
+  border-radius: 50%;
+  background-size: cover;
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  top: 85%;
+  left: 90%;
+  opacity: 0;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.up-button:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.up-button.active {
+  opacity: 0.9;
+  display: block;
+}
+
 @media screen and (max-width: 768px) {
   html {
     font-size: 65%;
