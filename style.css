@@ -238,7 +238,7 @@ section .video-container video {
 }
 
 .up-button {
-  background: url("/img/up.png");
+  background: url("img/up.png");
   background-color: black;
   border-radius: 50%;
   background-size: cover;
