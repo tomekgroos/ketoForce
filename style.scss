@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 @font-face {
     font-family: 'Spantaran';
     src:url('fonts/Spantaran.ttf.woff') format('woff'),
@@ -33,26 +37,41 @@ $secondColor: #6E65C2;
 
 
 html, body{
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
-    background-position: 50% 35%;
     scroll-behavior: smooth;
+}
 
 header{
+    .flags{
+        @include flex-center;
+        position: absolute;
+      
+        right: 30;
+        top: 50;
+        .flag-box{
+            height:20px;
+            width: 35px;
+            margin: 10px;
+            border: 1px solid gray;
+            img{
+                
+                width: 100%;
+                height: 100%;
+                
+            }
+        }
+    }
         font-family: 'Spantaran';
         margin:0;
      
     .logo-box{   
         @include flex-center;  
-        padding-top: 25px;
-        
-}
-p{
-    display: inline-block;
-    position: relative;
-    top:-100;
-}
+        margin-top: 25px;
+       
     }
+
+    
     nav{
         width: 100%;
         font-family: 'Nunito-Light';
@@ -71,7 +90,7 @@ p{
             li{ 
               padding-left: 0;
               margin-top: 15px;
-              width: 20%;
+              width: 15%;
               text-align: center;
               font-weight: bold;
               letter-spacing: 5px;
@@ -81,6 +100,7 @@ p{
               transition: 0.5s;
                 a{
                     text-decoration: none;
+                    color: inherit;
                     display: block;
                  }
               &:hover{
@@ -92,7 +112,16 @@ p{
     }
 }
     
-
+footer{
+    @include flex-center;
+    font-family: 'Nunito-Light';
+    width: 100%;
+    height: 40px;
+    font-size: 1rem;
+    background-color: $mainColor;
+    color: white;
+    
+}
 
 
 section {
@@ -108,6 +137,7 @@ section {
 }
 
 #about{
+    width: 100%;
     margin-top:170px;
     color: $secondColor;
     text-align: center;
@@ -122,8 +152,9 @@ section {
         font-size: 2rem;
     }
 
-    .about-box{    
-        display: flex;
+    .about-box{
+        @include flex-center;
+        margin:0;    
         flex-wrap: wrap;
         height: 100vh;
         width: 100%;
@@ -134,11 +165,11 @@ section {
             height: 100%;
             img{
                 position: relative;
-                top: 110;
+                top: 100;
                 border-radius: 5px;
                 right: -40;
                 max-width: 100%;
-                height: 70%;
+                max-height: 70%;
             }
         }
 
@@ -153,7 +184,7 @@ section {
                 width: 100%;
             }
             p{
-                margin-top: -300px;
+                
                 width: 100%;
                 font-size: 2rem;
             }
@@ -162,22 +193,23 @@ section {
 }
 
 #products{
-    .products-box{
+    width: 100%;
+    .product-box{
         display: flex;
         flex-wrap: wrap;
         height: 100vh;
         width: 100%;
         .product-img-box{
             width: 50%;
-            height: 100%;
+            height: 80%;
             img{
                 position: relative;
                 top: 80;
                 left: 80;
                 max-width: 100%;
                 max-height: 100%;
-                clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-                transform: scaleX(-1);
+                
+                
             }
         }
         .product-description{
@@ -229,21 +261,92 @@ section {
 
 @media screen and (max-width: 768px){
     html{
-        font-size: 65%;
+        font-size: 55%;
 }
 
-.logo-box img{
-    transform: scale(0.7);
+    #video{
+        .video-container{
+            background: url('img/video-replacement.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 60%;
+            height: 40vh;
+            video{
+                display: none;
+            }
+        }
+       
+    }
+
+.logo-box {
+    
+    img{
+        transform: scale(0.7);
+        width: 100%;
+    }
+
+    
+ 
 }
-    header nav{
-       ul{
-          
-           li{
-            letter-spacing: 0px;
-               margin-left: 20px;
-               text-align: center;
+    header {
+        nav{
+            ul{
+                text-align: center;
+                margin-bottom: -10px;
+                :nth-child(2){
+                 margin-right:10px;
+             }
+                li{
+                 width: 15%;
+                 letter-spacing: 0px;
+                 margin-left: 10px;
+                 text-align: center;
+                }
+            } 
+        }
+       .flags{
+           display: block;
+           top: 32;
+           right: 10;
+           
+           .flag-box{
+               height: 10px;
+               width: 20px;
+               margin-bottom: 17px;
            }
-       } 
+       }
+    }
+
+    #about{
+        margin: 0;
+        .about-box{
+            height: 50vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            .about-description{
+                height: 50%;
+                width: 50%;
+                padding: 10px;
+                h1{
+                    font-size: 1.8rem;
+                }
+                p{
+                    margin-top: -50px;
+                    font-size: 100%;
+                }
+            }
+            .about-img-box{
+                img{
+                   
+                    right:0;
+                }
+            }
+        }
+    }
+  
+    .up-button{
+        left: 77%;
+        transform: scale(0.7);
     }
 
 }
