@@ -10,8 +10,8 @@ const moveLeft = document.querySelectorAll(".move-left");
 
 const options = {
   root: null,
-  threshold: 0.1,
-  rootMargin: "50px",
+  threshold: 0.2,
+  rootMargin: "80px"
 };
 
 const observerRight = new IntersectionObserver((entries) => {
@@ -25,6 +25,10 @@ const observerRight = new IntersectionObserver((entries) => {
   });
 }, options);
 
+moveRight.forEach((el) => {
+  observerRight.observe(el);
+});
+
 const observerLeft = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.intersectionRatio > 0) {
@@ -36,9 +40,6 @@ const observerLeft = new IntersectionObserver((entries) => {
   });
 }, options);
 
-moveRight.forEach((el) => {
-  observerRight.observe(el);
-});
 
 moveLeft.forEach((el) => {
   observerLeft.observe(el);
@@ -56,3 +57,15 @@ const goUp = () => {
     window.scrollTo(0, 0);
   };
 };
+
+// slider automation 
+
+let count = 1;
+
+setInterval(() => {
+  document.getElementById('radio' + count).checked = true;
+  count++
+  if (count > 4){
+    count = 1;
+  }
+}, 10000);
