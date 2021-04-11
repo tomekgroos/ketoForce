@@ -38,56 +38,69 @@
                 </ul>
             </nav>
         </header>
-        <section id="video-slider">
-            <div class="videos-container">
+       
+      <section id="videos">
+          
+           <!--image slider start-->
+              <div class="slider">
+          <div class="slides">
+            <!--radio buttons start-->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <!--radio buttons end-->
+            <!--slide images start-->
+            <div class="slide first">
+              <video
+              autoplay="true"
+              loop="true"
+              type="video/mp4"
+              muted="true" src="img/foodForceVideo1.mp4"></video>
+            </div>
+            <div class="slide">
+              <video
+                      autoplay="true"
+                      loop="true"
+                      type="video/mp4"
+                      muted="true" src="img/foodForceVideo2.mp4"></video>
+            </div>
+            <div class="slide">
+              <video
+              autoplay="true"
+              loop="true"
+              type="video/mp4"
+              muted="true" src="img/foodForceVideo3.mp4"></video>
+            </div>
+            <div class="slide">
+              <video
+              autoplay="true"
+              loop="true"
+              type="video/mp4"
+              muted="true" src="img/foodForceVideo4.mp4"></video>
+            </div>
+            <!--slide images end-->
+            <!--automatic navigation start-->
+            <div class="navigation-auto">
+              <div class="auto-btn1"></div>
+              <div class="auto-btn2"></div>
+              <div class="auto-btn3"></div>
+              <div class="auto-btn4"></div>
+            </div>
+            <!--automatic navigation end-->
+          </div>
+          <!--manual navigation start-->
+          <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+          </div>
+          <!--manual navigation end-->
+                </div>
+                <!--image slider end-->
+      </section>
 
-                <input type="radio" name="radio-btn" id="radio1"> 
-                <input type="radio" name="radio-btn" id="radio2"> 
-                <input type="radio" name="radio-btn" id="radio3"> 
-                <input type="radio" name="radio-btn" id="radio4"> 
-
-                <div class="slide-video first">
-                    <video
-                    autoplay="true"
-                    loop="true"
-                    type="video/mp4"
-                    muted="true" src="img/foodForceVideo1.mp4"></video>
-                </div>
-                <div class="slide-video">
-                    <video
-                    autoplay="true"
-                    loop="true"
-                    type="video/mp4"
-                    muted="true" src="img/foodForceVideo2.mp4"></video>
-                </div>
-                <div class="slide-video">
-                    <video
-                    autoplay="true"
-                    loop="true"
-                    type="video/mp4"
-                    muted="true" src="img/foodForceVideo3.mp4"></video>
-                </div>
-                <div class="slide-video">
-                    <video
-                    autoplay="true"
-                    loop="true"
-                    type="video/mp4"
-                    muted="true" src="img/foodForceVideo4.mp4"></video>
-                </div>
-            </div>
-            <div class="auto-navigation">
-                <div class="auto-button1"></div>
-                <div class="auto-button2"></div>
-                <div class="auto-button3"></div>
-                <div class="auto-button4"></div>
-            </div>
-            <div class="manual-navigation">
-                <label for="radio1" class="manual-button"></label>
-                <label for="radio2" class="manual-button"></label>
-                <label for="radio3" class="manual-button"></label>
-                <label for="radio4" class="manual-button"></label>
-            </div>
-        </section>
         <section id="about">
             <h1>Food Force Nutrition</h1>
             <h2>Producent żywności dietetycznej oraz suplementów diety</h2>
@@ -261,7 +274,51 @@
         </section>
 
         <span class="up-button"></span>
-       <footer> <p>Food Force Nutrition sp. z o.o. &nbsp Site created by Tomasz Groos 2021 &copy</p></footer>
+
+       <!-- Footer -->
+        <footer> 
+            <div class="footer-container">
+                <div class="footer-contact">
+                    <div class="footer-logo-box">
+                        <img src="img/logo.png" alt="fflogo">
+                    </div>
+                    <p>Food Force Nutrition sp. z o.o.</p>
+                    <a href="mailto:b2b@foodforce.pl">
+                        <p style="text-decoration:none; color:#fff">email: b2b(at)foodforce.pl</p>
+                    </a>
+                    <p>tel. 790 711066</p>
+                    <br />Site created by Tomasz Groos 2021 &copy</p>
+                    <p></p>
+                </div>
+                <div class="footer-info">
+                    <div class="join-us">
+                        <h3>Dołącz do nas</h3>
+                        <div class="social-footer-container">
+                            <div id="PL" class="social-footer-box" style="background:#fff">
+                                <a href="https://www.instagram.com/foodforce.pl/" target="_blank"><img src="img/igLogo.png" alt="iglogo"></a>
+                            </div>
+                            <div id="PL" class="social-footer-box" >
+                                <a href="https://www.facebook.com/FoodForcePL/" target="_blank"><img src="img/fbLogo.png" alt="fblogo"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-nav-list">
+                        <h3>Informacje</h3>
+                        <ul>
+                            <li> <a href="#about">O nas</a></li>
+                            <li><a href="#products">Produkty</a></li>
+                            <li><a href="#brand">Marka</a></li>
+                            <li><a href="#shops">Sklepy</a></li>
+                            <li><a href="#contact">Współpraca</a></li>
+                        
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </footer>
        <script src="main.js" defer></script>
     </body>
 </html>
+
