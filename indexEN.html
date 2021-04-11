@@ -6,12 +6,22 @@
         <link rel="icon" href="img/ico.png">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
-        <script src="main.js" defer></script>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v10.0" 
+        nonce="GavV08sk"></script>
     </head>
 
     <body onload="goUp()">
         <header>
-            <div class="flags">
+            <div class="icons">
+                <div id="PL" class="social-box">
+                    <a href="https://www.instagram.com/foodforce.pl/" target="_blank"><img src="img/igLogo.png" alt="PL-język"></a>
+                </div>
+                <div id="PL" class="social-box">
+                    <a href="https://www.facebook.com/FoodForcePL/" target="_blank"><img src="img/fbLogo.png" alt="PL-język"></a>
+                </div>
+                <div id="PL" class="social-box" style="height: 100%">
+                    <a href="https://www.youtube.com/channel/UCu0n7W2tSQd5PXTj2qRwqsw" target="_blank"><img src="img/ytLogo.png" alt="PL-język"></a>
+                </div>
                 <div id="PL" class="flag-box">
                     <a href="index.html"><img src="img/flagPL.png" alt="PL-język"></a>
                 </div>
@@ -26,50 +36,122 @@
                 <ul>
                         <li> <a href="#about">ABOUT</a></li>    
                         <li><a href="#products">PRODUCTS</a></li>
-                        <li><a href="#team">TEAM</a></li>
+                        <li><a href="#brand">BRAND</a></li>
                         <li><a href="#shops">SHOPS</a></li>
+                    <li><a href="#cooperation">CO-OP</a></li>
                     <li><a href="#contact">CONTACT</a></li>
                     
                 </ul>
             </nav>
         </header>
-        <section id="video">
-            <div class="video-container">
-                <video  
-                autoplay="true"
-                loop="true"
-                type="video/mp4"
-                muted="true" src="img/foodForceVideo.mp4"></video>
+       
+      <section id="videos">
+          
+           <!--image slider start-->
+              <div class="slider">
+          <div class="slides">
+            <!--radio buttons start-->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <!--radio buttons end-->
+            <!--slide images start-->
+            <div class="slide first">
+              <video
+              autoplay="true"
+              loop="true"
+              type="video/mp4"
+              muted="true" src="img/foodForceVideo1.mp4"></video>
             </div>
-           
-        </section>
+            <div class="slide">
+              <video
+                      autoplay="true"
+                      loop="true"
+                      type="video/mp4"
+                      muted="true" src="img/foodForceVideo2.mp4"></video>
+            </div>
+            <div class="slide">
+              <video
+              autoplay="true"
+              loop="true"
+              type="video/mp4"
+              muted="true" src="img/foodForceVideo3.mp4"></video>
+            </div>
+            <div class="slide">
+              <video
+              autoplay="true"
+              loop="true"
+              type="video/mp4"
+              muted="true" src="img/foodForceVideo4.mp4"></video>
+            </div>
+            <!--slide images end-->
+            <!--automatic navigation start-->
+            <div class="navigation-auto">
+              <div class="auto-btn1"></div>
+              <div class="auto-btn2"></div>
+              <div class="auto-btn3"></div>
+              <div class="auto-btn4"></div>
+            </div>
+            <!--automatic navigation end-->
+          </div>
+          <!--manual navigation start-->
+          <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+          </div>
+          <!--manual navigation end-->
+                </div>
+                <!--image slider end-->
+      </section>
+
         <section id="about">
             <h1>Food Force Nutrition</h1>
             <h2>A manufacturer of dietary foods and supplements</h2>
             <div class="about-box">
                 
                 <div class="about-description">
-                    <h1>Food Force Nutrition</h1> 
-                    <p>Everything You need to be keto!</p>  
+                    <h1>Food Force Nutrition Sp. z o.o. <br />- Technology of KetoNutrition!™</h1> 
+                    <p>We manufacture high-quality dietary supplements
+                        and dietary foods, especially low-carbohydrate foods
+                        or high-fat (healthy, nutritious fats).
+                        According to the latest PubMed research and market trends, low-carbohydrate nutrition
+                        with the reduction of simple sugars, it has a large positive effect
+                        on the human body. A ketogenic diet based on our products
+                        has a great slimming potential, improving psychophysical properties,
+                        improving metabolic flexibility or even, in some cases, the therapeutic potential
+                        (use of clinical ketosis).
+                    </p>  
+                    <p>
+                        Food Force Nutrition Sp. z o.o. is the first Polish producer of the best food products
+                        recommended in a ketogenic, low-carbohydrate or LCHF diet.
+                    </p>
+                    <p>
+                        Our products are of the highest quality, so you will not find chemical additives in them,
+                         enhancers, gluten, lactose or sugars. Simple, clean ingredients - maximum taste and health!
+                    </p>
                 </div>
                 <div class="about-img-box">
-                    <img src="img/korytarzffpaint.jpg" alt="corridor">
+                    <img src="img/koszulka2.jpg" alt="korytarz">
                 </div>
             </div>
 
         </section>
+
         <section id="products">
 
-            <!-- Ketonella Grid -->
+            <!-- Ketonella Description -->
 
             <div class="product-box move-Right">
                 
                 <div class="product-img-box">
-                    <img src="img/ketonellaGrid.png" alt="ketonellas">
+                    <img id="spoon" src="img/ketonella1.png" alt="ketonellas">
                 </div>
-                <div class="product-description">
-                    <h1>ketonella&#8482 </h1> 
-                    <p>Ketonella creams are characterized by the lack of sugar as well
+                <div class="product-description mainProductDescription">
+                    <h1 >ketonella&#8482</h1> 
+                    <p>Ketonella&#8482 creams are characterized by the lack of sugar and
                         harmful trans fats (known from traditional sweet
                         creams), which have been replaced with a sweetener and increased
                         the content of healthy fats and natural ingredients,
@@ -79,10 +161,10 @@
 
             <!-- Ketonella Choco Crunch -->
 
-            <div class="product-box move-left bg">
+            <div class="product-box bg move-Left ">
                 
               
-                <div class="product-description ketonella">
+                <div class="product-description ketonella ">
                     <h1>ketonella&#8482 Choco Crunch</h1> 
                 </div>
                 <div class="product-img-box ketonella">
@@ -104,7 +186,7 @@
 
             <!-- Ketonella Coco -->
 
-            <div class="product-box bg move-Left ">
+            <div class="product-box bg move-Left">
                 <div class="product-description ketonella ">
                     <h1>ketonella&#8482 Coco Crunch</h1> 
                 </div>
@@ -125,9 +207,205 @@
                     <h1 style="transform: translateX(-10%)">ketonella&#8482 Salted Caramel Crunch</h1> 
                 </div>
             </div>
+
+           <!--  Keto BHB Description -->
+
+            <div class="product-box move-Left">
+                
+                <div class="product-img-box">
+                    <img id="spoon" src="img/ketoBHB2.png" alt="ketonellas">
+                </div>
+                <div class="product-description mainProductDescription">
+                    <h1 >KETO BHB&#8482</h1> 
+                    <p>KETO BHB™ is characterized by the optimal level of each salt
+                        mineral beta-hydroxybutyrate and a unique taste,
+                        which perfectly covers the salty-bitter nature of the salt, creating a product
+                        downright delicious, not only effective</p>
+                </div>
+            </div>
+
+            <!-- Keto BHB Natural -->
+
+            <div class="product-box bg move-Right">
             
+                <div class="product-description bhb">
+                    <h1>KETO BHB&#8482 Natural</h1> 
+                </div>
+                <div class="product-img-box bhb ">
+                    <img class="noBgImg" src="img/bhbNatural.png" alt="bhbNatural">
+                </div>
+            </div>
+
+            <!-- Keto BHB Apple -->
+
+            <div class="product-box move-Left">
+                
+                <div class="product-img-box bhb">
+                    <img class="noBgImg" src="img/bhbApple.png" alt="bhbApple">
+                </div>
+                <div class="product-description bhb">
+                    <h1>KETO BHB&#8482 Apple</h1> 
+                </div>
+            </div>
+
+            <!-- Keto BHB Orange -->
+
+            <div class="product-box bg move-Right">
+            
+                <div class="product-description bhb">
+                    <h1>KETO BHB&#8482  Orange</h1> 
+                </div>
+                <div class="product-img-box bhb ">
+                    <img class="noBgImg" src="img/bhbOrange.png" alt="bhbOrange">
+                </div>
+            </div>
+
+            <!-- CBD Description -->
+
+            <div class="cbd product-box move-Left">
+                
+                <div class="product-img-box">
+                    <img src="img/cbd.png" alt="cbd">
+                </div>
+                <div class="product-description mainProductDescription">
+                    <h1>CBD hemp extract 10%</h1> 
+                    <p>What is CBD? This is one of over 120 compounds known as cannabinoids. CBD is
+                        a natural chemical compound derived from hemp that has been used for many years
+                        as a medicine for various diseases. It is worth remembering that CBD products are not addictive, and ours are
+                        CBD oil and other products that you can find here do not contain THC, the compound
+                        psychoactive. Therefore, they are 100% legal and safe. Batch tested and
+                        laboratory-confirmed purity and CBD content.
+                    </p>
+                        <a href="https://foodforce.pl/userdata/public/assets//LTH_87_21_1.pdf" target="_blank">
+                           <br/> <p id="certificateCbd">Certificate of laboratory analysis of CBD content</p></a>
+                        
+                        
+                </div>
+            </div>
+            <h1 class="getCatalog">The full catalog of products can be obtained 
+                after contacting <a href="#cooperation">the sales department </a></h1>
         </section>
+
+        <!-- Brand Section -->
+
+        <section id="brand">
+            
+            <div class="fb-page" data-href="https://www.facebook.com/FoodForcePL/" 
+            data-tabs="timeline" data-width="300" data-height="400" data-small-header="false" 
+            data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote 
+            cite="https://www.facebook.com/FoodForcePL/" class="fb-xfbml-parse-ignore">
+                <a href="https://www.facebook.com/FoodForcePL/">foodforce.pl</a></blockquote></div>
+            <h1>Distributors and partner stores</h1>
+        </section>
+
+        <!-- Shops Section -->
+
+        <section id="shops">
+            <h1>Food Force brand products are available at over 1000 points of sale</h1>
+            <div class="shops-container">
+                <div class="shops-logo-container">
+                    <div class="shop-logo-box">
+                        <img src="img/gulitFreeLogo.jpg" alt="guilt">
+                    </div>
+                    <div class="shop-logo-box">
+                        <img src="img/zdrowoZakreceniLogo.png" alt="zdrowo">
+                    </div>
+                    <div class="shop-logo-box">
+                        <img src="img/przepisNaZdrowieLogo.png" alt="przepisZdrowie">
+                    </div>
+                    <div class="shop-logo-box">
+                        <img src="img/activusLogo.png" alt="activus">
+                    </div>
+                    <div class="shop-logo-box">
+                        <img src="img/massZoneLogo.png" alt="mass">
+                    </div>
+                    <div class="shop-logo-box">
+                        <img src="img/muscleStoreLogo.jpg" alt="muscle">
+                    </div>
+                    <div class="shop-logo-box">
+                        <img src="img/greenTaoLogo.png" alt="greenTao">
+                    </div>
+                    <div class="shop-logo-box">
+                        <img src="img/osaSportLogo.jpg" alt="osaSport">
+                    </div>
+                    <div class="shop-logo-box">
+                        <img src="img/marinaLogo.png" alt="marinaWellness">
+                    </div>
+                    <div id="fitzone" class="shop-logo-box">
+                        <img src="img/fitZoneLogo.png" alt="fitZone">
+                    </div>
+                </div>
+                <div class="clikAndBuy">
+                    <div class="food-force-logo-box">
+                        <h2>Official Retail Store</h2>
+                        <a href="https://foodforce.pl/" target="_blank"><img src="img/logo.png" alt="fflogo"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <span class="up-button"></span>
-       <footer> <p>Food Force Nutrition sp. z o.o. &nbsp Site created by Tomasz Groos 2021 &copy</p></footer>
+
+        <!-- Cooperation section -->
+
+        <section id="cooperation">
+            <div class="coop-text-box">
+                <h1>Would you like to become a partner or distributor of Food Force Nutrition products?</h1>
+                    <p>Start earning money on popular, healthy products sought by consumers who value health and an active lifestyle.
+                        Write us a message, and after initial verification, we will send you a full catalog of products and a B2B price list.</p>
+            </div>
+        </section>
+
+       <!-- Footer -->
+        <footer id="contact"> 
+            <div class="footer-container">
+                <div class="footer-contact">
+                    <div class="footer-logo-box">
+                        <img src="img/logo.png" alt="fflogo">
+                    </div>
+                    <p>Food Force Nutrition sp. z o.o.</p>
+                    <p>al. Gen. Józefa Hallera 140/021-022</p>
+                    <p>80-416 Gdańsk</p>
+                    <a href="mailto:b2b@foodforce.pl">
+                        <p style="text-decoration:none; color:#fff">email: b2b(at)foodforce.pl</p>
+                    </a>
+                    <p>tel. 790 711066</p>
+                    <br />Site created by Tomasz Groos 2021 &copy</p>
+                    <p></p>
+                </div>
+                <div class="footer-info">
+                    <div class="join-us">
+                        <h3>Join Us</h3>
+                        <div class="social-footer-container">
+                            <div id="PL" class="social-footer-box" style="background:#fff">
+                                <a href="https://www.instagram.com/foodforce.pl/" target="_blank"><img src="img/igLogo.png" alt="iglogo"></a>
+                            </div>
+                            <div id="PL" class="social-footer-box" >
+                                <a href="https://www.facebook.com/FoodForcePL/" target="_blank"><img src="img/fbLogo.png" alt="fblogo"></a>
+                            </div>
+                            <div id="PL" class="social-footer-box" >
+                                <a href="https://www.youtube.com/channel/UCu0n7W2tSQd5PXTj2qRwqsw" target="_blank">
+                                    <img src="img/ytLogo.png" alt="fblogo"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-nav-list">
+                        <h3>Information</h3>
+                        <ul>
+                            <li> <a href="#about">About</a></li>
+                            <li><a href="#products">Products</a></li>
+                            <li><a href="#brand">Brand</a></li>
+                            <li><a href="#shops">Shops</a></li>
+                            <li><a href="#cooperation">Co-op</a></li>
+                        
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </footer>
+       <script src="main.js" defer></script>
     </body>
 </html>
+

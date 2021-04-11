@@ -87,7 +87,7 @@ header nav {
 }
 
 header nav ul {
-  width: 95%;
+  width: 100%;
   margin-bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -103,7 +103,7 @@ header nav ul {
 }
 
 header nav ul :nth-child(4) {
-  margin-right: 20px;
+  margin-right: 15px;
 }
 
 header nav ul li {
@@ -135,10 +135,11 @@ footer {
   overflow: hidden;
   font-family: "Nunito-Light";
   width: 100%;
-  height: 50vh;
+  height: 60vh;
   font-size: 1rem;
   background-color: #4814a0;
   color: white;
+  border-top: 10px ridge #6e65c2;
 }
 
 footer .footer-container {
@@ -177,6 +178,11 @@ footer .footer-container .join-us .social-footer-container {
   right: 230;
 }
 
+footer .footer-container .join-us .social-footer-container :nth-child(3) {
+  -webkit-transform: translateY(15%);
+          transform: translateY(15%);
+}
+
 footer .footer-container .join-us .social-footer-container .social-footer-box {
   width: 30px;
   height: 30px;
@@ -191,6 +197,14 @@ footer .footer-container .join-us .social-footer-container .social-footer-box im
 
 footer .footer-container .footer-contact {
   width: 25%;
+}
+
+footer .footer-container .footer-contact :nth-child(2) {
+  text-transform: uppercase;
+}
+
+footer .footer-container .footer-contact :nth-child(5) {
+  text-decoration: none;
 }
 
 footer .footer-container .footer-contact .footer-logo-box {
@@ -301,7 +315,7 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  top: 970;
+  top: 900;
 }
 
 .manual-btn {
@@ -347,7 +361,7 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  top: 970;
+  top: 900;
 }
 
 .navigation-auto div {
@@ -432,23 +446,23 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
 
 #about .about-box .about-img-box img {
   position: relative;
-  top: 100;
+  top: 110;
   border-radius: 5px;
   right: -40;
   max-width: 100%;
-  max-height: 70%;
+  max-height: 100%;
 }
 
 #about .about-box .about-description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   height: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -459,15 +473,15 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
 #about .about-box .about-description h1 {
   font-family: "Nunito-Light";
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2rem;
   width: 100%;
+  margin-top: 140px;
 }
 
 #about .about-box .about-description p {
-  position: relative;
-  bottom: 150;
-  width: 100%;
-  font-size: 2rem;
+  padding: 10px;
+  font-size: 1rem;
+  margin-top: -100px;
 }
 
 #products {
@@ -544,6 +558,46 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
   margin-top: -20px;
 }
 
+#products .cbd .product-description {
+  padding-right: 50px;
+}
+
+#products .cbd .product-description h1 {
+  margin-top: 80px;
+  font-size: 3rem;
+}
+
+#products .cbd .product-description :nth-child(2) {
+  margin-top: -120px;
+  padding: 0;
+  font-size: 1.5rem;
+}
+
+#products .cbd .product-description :nth-child(3) {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#products .cbd .product-img-box img {
+  -webkit-transform: translate(25%, 20%);
+          transform: translate(25%, 20%);
+}
+
+#products .getCatalog {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  background-color: #4814a0;
+  color: white;
+  text-transform: uppercase;
+}
+
+#products .getCatalog a {
+  text-decoration: underline;
+  color: white;
+}
+
 #brand {
   color: #4814a0;
   text-shadow: 1px 2px 3px #6e65c2;
@@ -563,6 +617,16 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
   text-transform: uppercase;
 }
 
+#brand .fb-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 50px;
+}
+
 #shops {
   overflow: hidden;
 }
@@ -579,6 +643,7 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
 }
 
 #shops .shops-container {
+  margin-top: 40px;
   width: 100%;
   height: 100vh;
   display: -ms-grid;
@@ -587,23 +652,29 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
       grid-template-columns: repeat(2, 1fr);
 }
 
+#shops .shops-container :nth-child(10) {
+  -webkit-transform: translateX(80%);
+          transform: translateX(80%);
+}
+
 #shops .shops-container .shops-logo-container {
   width: 100%;
   margin-top: 50px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
 }
 
 #shops .shops-container .shops-logo-container .shop-logo-box {
   width: 100%;
+  height: 100%;
 }
 
 #shops .shops-container .shops-logo-container .shop-logo-box img {
-  width: 80%;
+  width: 90%;
   max-height: 100%;
   padding-left: 50px;
 }
@@ -691,6 +762,39 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
           transform: translate(25%, 25%);
 }
 
+#cooperation {
+  height: 100vh;
+  background: url("img/violetpaintbackround.png");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+}
+
+#cooperation .coop-text-box {
+  color: white;
+  padding: 30px;
+}
+
+#cooperation .coop-text-box :first-child {
+  padding-bottom: 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.2rem;
+}
+
+#cooperation p {
+  font-size: 1.8rem;
+}
+
 @media screen and (max-width: 768px) {
   html {
     font-size: 45%;
@@ -699,7 +803,9 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
     height: 40vh;
   }
   #videos .slides,
-  #videos input {
+  #videos input,
+  #videos .navigation-manual,
+  #videos .navigation-auto {
     display: none;
   }
   #videos .slider {
@@ -717,17 +823,17 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
     width: 100%;
   }
   header nav ul {
-    width: 110%;
+    width: 105%;
     text-align: center;
     margin-bottom: -10px;
     -webkit-transform: translateX(-13%);
             transform: translateX(-13%);
   }
-  header nav ul :nth-child(2) {
-    margin-right: 10px;
-  }
   header nav ul :nth-child(4) {
-    margin-right: -3px;
+    margin-right: 0px;
+  }
+  header nav ul :nth-child(5) {
+    margin-right: 15px;
   }
   header nav ul li {
     letter-spacing: 0px;
@@ -740,17 +846,17 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
     right: 10;
   }
   header .icons .social-box {
-    height: 20px;
-    width: 20px;
-    margin-bottom: 17px;
+    height: 18px;
+    width: 18px;
+    margin-bottom: 10px;
   }
   header .icons .flag-box {
-    height: 10px;
-    width: 20px;
-    margin-bottom: 17px;
+    height: 12px;
+    width: 18px;
+    margin-bottom: 10px;
   }
   #about {
-    margin: 0;
+    margin-top: 50px;
   }
   #about .about-box {
     height: 50vh;
@@ -758,15 +864,17 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
     background-size: cover;
   }
   #about .about-box .about-description {
-    height: 50%;
+    height: 100%;
     width: 50%;
-    padding: 10px;
+    padding: 5px;
   }
   #about .about-box .about-description h1 {
-    font-size: 1.8rem;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    font-size: 1.2rem;
   }
   #about .about-box .about-description p {
-    bottom: 15;
+    margin-top: -60px;
     font-size: 80%;
   }
   #about .about-box .about-img-box img {
@@ -835,7 +943,7 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
   }
   #shops .shops-container {
     width: 100%;
-    height: 60vh;
+    height: 80vh;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[1];
@@ -843,20 +951,25 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
   }
   #shops .shops-container .shops-logo-container {
     width: 100%;
-    margin-top: 50px;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
-    -ms-grid-rows: (1fr)[2];
-        grid-template-rows: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[5];
+        grid-template-rows: repeat(5, 1fr);
+  }
+  #shops .shops-container .shops-logo-container :nth-child(10) {
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
   }
   #shops .shops-container .shops-logo-container .shop-logo-box {
-    width: 100%;
+    width: 80%;
+    margin-bottom: 20px;
   }
   #shops .shops-container .shops-logo-container .shop-logo-box img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 90%;
+    max-height: 90%;
+    padding: -5px;
   }
   #shops .shops-container .clikAndBuy {
     width: 45%;
@@ -864,12 +977,12 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-transform: translate(65%, -25%);
-            transform: translate(65%, -25%);
+    -webkit-transform: translate(65%, 0%);
+            transform: translate(65%, 0%);
   }
   #shops .shops-container .clikAndBuy h2 {
-    -webkit-transform: translateX(40%);
-            transform: translateX(40%);
+    -webkit-transform: translateX(25%);
+            transform: translateX(25%);
     font-size: 1.8rem;
   }
   #shops .shops-container .clikAndBuy img {
@@ -982,6 +1095,42 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
     text-decoration: none;
     color: inherit;
     display: block;
+  }
+  #cooperation {
+    height: 65vh;
+  }
+  #cooperation .coop-text-box {
+    color: white;
+    padding: 50px;
+  }
+  #cooperation .coop-text-box :first-child {
+    margin-top: 100px;
+  }
+  #cooperation p {
+    font-size: 1.8rem;
+  }
+  .cbd .product-description h1 {
+    -webkit-transform: translate(-15%, -420%);
+            transform: translate(-15%, -420%);
+    width: 100%;
+    font-size: 1.8rem !important;
+  }
+  .cbd .product-description :nth-child(2) {
+    font-size: 1.2rem !important;
+    -webkit-transform: translate(-15%, -10%);
+            transform: translate(-15%, -10%);
+  }
+  .cbd .product-img-box {
+    -webkit-transform: translateX(-25%);
+            transform: translateX(-25%);
+  }
+  .cbd .product-img-box img {
+    margin-right: 50px;
+  }
+  .cbd #certificateCbd {
+    font-size: 1rem !important;
+    -webkit-transform: translate(-17%, 600%) !important;
+            transform: translate(-17%, 600%) !important;
   }
 }
 
