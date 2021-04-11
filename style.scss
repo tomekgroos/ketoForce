@@ -858,7 +858,7 @@ footer {
   }
 
   footer {
-    height: 40vh;
+    height: 50vh;
     font-size: 1rem;
     color: white;
     .footer-container {
@@ -869,7 +869,7 @@ footer {
         h3 {
           position: relative;
           width: 60%;
-          top: 30;
+          top: 27;
           right: 120;
           padding: 5px;
         }
@@ -896,7 +896,8 @@ footer {
       }
       .footer-contact {
         width: 30%;
-        margin-top: -60px;
+        margin-top: -70px;
+        font-size: 0.8rem;
         .footer-logo-box {
           background: #fff;
           padding: 10px;
@@ -906,6 +907,7 @@ footer {
             max-height: 100%;
           }
         }
+        
       }
       .footer-info {
         @include flex-center;
