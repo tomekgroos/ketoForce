@@ -809,12 +809,12 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
     display: none;
   }
   #videos .slider {
-    background: url("img/video-replacement.png");
-    background-size: cover;
+    background: url("img/zacznijKeto.png");
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: 60%;
     border-radius: 0;
-    height: 100%;
+    height: 70%;
     width: 100vw;
   }
   .logo-box img {
@@ -856,7 +856,7 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
     margin-bottom: 10px;
   }
   #about {
-    margin-top: 50px;
+    margin-top: -70px;
   }
   #about .about-box {
     height: 50vh;
@@ -871,13 +871,15 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
   #about .about-box .about-description h1 {
     margin-top: 50px;
     margin-bottom: 25px;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    letter-spacing: 0px;
   }
   #about .about-box .about-description p {
-    margin-top: -60px;
+    margin-top: -50px;
     font-size: 80%;
   }
   #about .about-box .about-img-box img {
+    top: 100;
     right: 0;
   }
   #products .product-box {
