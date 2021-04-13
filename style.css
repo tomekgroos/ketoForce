@@ -531,7 +531,7 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100%;
+  height: 90%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   color: #6e65c2;
@@ -545,6 +545,15 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
   text-transform: uppercase;
 }
 
+#products .product-box .product-description h2 {
+  background-color: #6e65c2;
+  color: white;
+  padding: 10px;
+  position: relative;
+  top: -220;
+  left: -130;
+}
+
 #products .product-box .product-description p {
   margin-top: -350px;
   padding-right: 40px;
@@ -552,6 +561,10 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
   padding-left: 20px;
   width: 100%;
   font-size: 2rem;
+}
+
+#products .product-box .product-description .ketosisLine {
+  left: -110;
 }
 
 #products .product-box .mainProductDescription h1 {
@@ -563,25 +576,52 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
 }
 
 #products .cbd .product-description h1 {
-  margin-top: 80px;
   font-size: 3rem;
 }
 
 #products .cbd .product-description :nth-child(2) {
-  margin-top: -120px;
+  position: relative;
+  top: -50;
+}
+
+#products .cbd .product-description :nth-child(3) {
+  margin-top: -50px;
   padding: 0;
   font-size: 1.5rem;
 }
 
-#products .cbd .product-description :nth-child(3) {
+#products .cbd .product-description :nth-child(4) {
   color: inherit;
   cursor: pointer;
   text-decoration: underline;
+  margin-top: 330px;
 }
 
 #products .cbd .product-img-box img {
   -webkit-transform: translate(25%, 20%);
           transform: translate(25%, 20%);
+}
+
+#products .ashwa .product-img-box {
+  -webkit-transform: translateY(10%);
+          transform: translateY(10%);
+}
+
+#products .ashwa .product-img-box img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#products .ashwa .product-description :first-child {
+  -webkit-transform: translate(-30%, 10%);
+          transform: translate(-30%, 10%);
+}
+
+#products .ashwa .product-description :last-child {
+  position: relative;
+  left: 0;
+  background: white;
+  color: #6e65c2;
 }
 
 #products .getCatalog {
@@ -613,7 +653,7 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 4rem;
+  font-size: 3.5rem;
   text-transform: uppercase;
 }
 
@@ -627,11 +667,36 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
   padding-left: 50px;
 }
 
+#brand .brand-img-box {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+#brand .brand-img-box img {
+  height: 100%;
+  width: 100%;
+}
+
 #shops {
   overflow: hidden;
 }
 
 #shops h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  color: #4814a0;
+}
+
+#shops h2 {
   width: 100%;
   background: #4814a0;
   color: white;
@@ -640,6 +705,11 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
   text-align: center;
   text-transform: uppercase;
   text-shadow: 1px 2px 3px black;
+}
+
+#shops h3 {
+  color: black;
+  margin-left: 150px;
 }
 
 #shops .shops-container {
@@ -762,6 +832,16 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
           transform: translate(25%, 25%);
 }
 
+.coffees h1 {
+  margin-left: -380px;
+}
+
+.coffees .product-img-box img {
+  width: 70%;
+  padding-top: 85px;
+  padding-left: 35px;
+}
+
 #cooperation {
   height: 100vh;
   background: url("img/violetpaintbackround.png");
@@ -795,6 +875,7 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
   font-size: 1.8rem;
 }
 
+/* media queries */
 @media screen and (max-width: 768px) {
   html {
     font-size: 45%;
@@ -889,16 +970,26 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
   #products .product-box .product-description {
     font-size: 40%;
     height: 50%;
-    -webkit-transform: translateY(-25%);
-            transform: translateY(-25%);
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
   }
   #products .product-box .product-description h1 {
     font-size: 2.2rem;
   }
+  #products .product-box .product-description h2 {
+    top: -20;
+    left: -30;
+    padding: 5px;
+  }
   #products .product-box .product-description p {
     font-size: 1.2rem;
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
     padding: 10px;
     margin: 0;
+  }
+  #products .product-box .product-description .ketosisLine {
+    left: -25;
   }
   #products .product-box .product-img-box img {
     max-height: 100%;
@@ -940,8 +1031,41 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
     -webkit-transform: translate(35%, -10%);
             transform: translate(35%, -10%);
   }
+  .coffees h1 {
+    margin-left: -20px;
+    font-size: 1.8rem !important;
+  }
+  .coffees .product-img-box img {
+    width: 90%;
+    padding-top: 70px;
+    padding-left: 15px;
+  }
   #brand h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+  }
+  #brand .fb-page {
+    padding-left: 0px;
+  }
+  #brand .brand-img-box {
+    margin-bottom: 30px;
+    width: 100%;
+    height: 30vh;
+  }
+  #brand .brand-img-box img {
+    height: 100%;
+    width: 100%;
+  }
+  #shops h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 20px;
+  }
+  #shops h2 {
+    font-size: 1.7rem;
+  }
+  #shops h3 {
+    margin-left: 100px;
+    font-size: 1.7rem;
   }
   #shops .shops-container {
     width: 100%;
@@ -1113,15 +1237,19 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
     font-size: 1.8rem;
   }
   .cbd .product-description h1 {
-    -webkit-transform: translate(-15%, -420%);
-            transform: translate(-15%, -420%);
+    -webkit-transform: translateY(-250%);
+            transform: translateY(-250%);
     width: 100%;
-    font-size: 1.8rem !important;
+    font-size: 1.5rem !important;
   }
   .cbd .product-description :nth-child(2) {
+    top: -70 !important;
+    left: -25 !important;
+  }
+  .cbd .product-description :nth-child(3) {
     font-size: 1.2rem !important;
-    -webkit-transform: translate(-15%, -10%);
-            transform: translate(-15%, -10%);
+    -webkit-transform: translateY(-10%) !important;
+            transform: translateY(-10%) !important;
   }
   .cbd .product-img-box {
     -webkit-transform: translateX(-25%);
@@ -1132,8 +1260,20 @@ footer .footer-container .footer-info .footer-nav-list ul li a {
   }
   .cbd #certificateCbd {
     font-size: 1rem !important;
-    -webkit-transform: translate(-17%, 600%) !important;
-            transform: translate(-17%, 600%) !important;
+    -webkit-transform: translate(20%, -750%) !important;
+            transform: translate(20%, -750%) !important;
+  }
+  .ashwa .product-img-box img {
+    margin-top: 50px;
+    margin-left: -20px;
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  .ashwa .product-description :last-child {
+    left: 0 !important;
+    top: -45 !important;
+    background: white;
+    color: #6e65c2;
   }
 }
 

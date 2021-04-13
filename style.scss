@@ -415,7 +415,7 @@ footer {
 
     .product-description {
       @include flex-center;
-      height: 100%;
+      height: 90%;
       flex-wrap: wrap;
       color: $secondColor;
       width: 50%;
@@ -426,6 +426,15 @@ footer {
         width: 100%;
         text-transform: uppercase;
       }
+
+      h2{
+        background-color: $secondColor;
+        color: white;
+        padding: 10px;
+        position: relative;
+        top: -220;
+        left: -130
+      }
       p {
         margin-top: -350px;
         padding-right: 40px;
@@ -434,6 +443,9 @@ footer {
         width: 100%;
         font-size: 2rem;
       }
+     .ketosisLine{
+       left: -110;
+     }
     }
     .mainProductDescription {
       h1 {
@@ -446,18 +458,22 @@ footer {
     .product-description {
       padding-right: 50px;
       h1 {
-        margin-top: 80px;
         font-size: 3rem;
       }
-      :nth-child(2) {
-        margin-top: -120px;
+      :nth-child(2){
+        position: relative;
+        top: -50;
+      }
+      :nth-child(3) {
+        margin-top: -50px;
         padding: 0;
         font-size: 1.5rem;
       }
-      :nth-child(3) {
+      :nth-child(4) {
         color: inherit;
         cursor: pointer;
         text-decoration: underline;
+        margin-top: 330px;
       }
     }
     .product-img-box {
@@ -465,7 +481,30 @@ footer {
         transform: translate(25%, 20%);
       }
     }
+   
   }
+
+  .ashwa{
+    .product-img-box{
+      transform: translateY(10%);
+      img{
+        transform: scale(1.2);
+      }
+    }
+    .product-description{
+      :first-child{
+        transform: translate(-30%, 10%);
+      }
+      :last-child{
+        position: relative;
+        left: 0;
+        background: white;
+        color: $secondColor;
+
+      }
+    }
+  }
+  
 
   .getCatalog {
     width: 100%;
@@ -486,7 +525,7 @@ footer {
   text-shadow: 1px 2px 3px $secondColor;
   h1 {
     @include flex-center;
-    font-size: 4rem;
+    font-size: 3.5rem;
     text-transform: uppercase;
   }
 
@@ -495,11 +534,25 @@ footer {
     justify-content: center;
     padding-left: 50px;
   }
+  .brand-img-box {
+    margin-bottom: 30px;
+    width: 100%;
+    img{
+      height: 100%;
+      width: 100%;
+    }
+  }
 }
 
 #shops {
   overflow: hidden;
-  h1 {
+  h1{
+    @include flex-center;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: $mainColor;
+  }
+  h2 {
     width: 100%;
     background: $mainColor;
     color: white;
@@ -508,6 +561,11 @@ footer {
     text-align: center;
     text-transform: uppercase;
     text-shadow: 1px 2px 3px black;
+  }
+
+  h3{
+    color: black;
+    margin-left: 150px;
   }
 
   .shops-container {
@@ -613,6 +671,20 @@ footer {
   }
 }
 
+.coffees{
+  h1{
+    margin-left: -380px;
+  }
+
+  .product-img-box{
+      img{
+        width: 70%;
+        padding-top: 85px;
+        padding-left: 35px;
+      }
+  }
+}
+
 #cooperation {
   height: 100vh;
   background: url("img/violetpaintbackround.png");
@@ -634,6 +706,8 @@ footer {
     font-size: 1.8rem;
   }
 }
+
+/* media queries */
 
 @media screen and (max-width: 768px) {
   html {
@@ -742,18 +816,29 @@ footer {
       .product-description {
         font-size: 40%;
         height: 50%;
-        transform: translateY(-25%);
+        transform: translateY(-10%);
 
         h1 {
           font-size: 2.2rem;
         }
 
+        h2{
+          top: -20;
+          left: -30;
+          padding: 5px;
+        }
+
         p {
           font-size: 1.2rem;
-
+          transform: translateY(-25%);
           padding: 10px;
           margin: 0;
         }
+
+        .ketosisLine{
+          left: -25;
+        }
+
       }
       .product-img-box {
         img {
@@ -795,6 +880,7 @@ footer {
     h1 {
       transform: translateY(80%);
     }
+ 
     img {
       margin-top: 55px;
       margin-left: 30px;
@@ -806,13 +892,52 @@ footer {
     }
   }
 
+  .coffees{
+    h1{
+      margin-left: -20px;
+      font-size: 1.8rem!important;
+    }
+  
+    .product-img-box{
+        img{
+          width: 90%;
+          padding-top: 70px;
+          padding-left: 15px;
+        }
+    }
+  }
+
   #brand {
     h1 {
-      font-size: 2.5rem;
+      font-size: 2rem;
+    }
+    .fb-page {
+      padding-left: 0px;
+    }
+    .brand-img-box {
+      margin-bottom: 30px;
+      width: 100%;
+      height: 30vh;
+      img{
+        height: 100%;
+        width: 100%;
+      }
     }
   }
 
   #shops {
+    h1{
+      font-size: 2rem;
+      text-align: center;
+      margin-top: 20px;
+    }
+    h2{
+      font-size: 1.7rem;
+    }
+    h3{
+      margin-left: 100px;
+      font-size: 1.7rem;
+    }
     .shops-container {
       width: 100%;
       height: 80vh;
@@ -963,14 +1088,20 @@ footer {
   .cbd {
     .product-description {
       h1 {
-        transform: translate(-15%, -420%);
+        transform: translateY(-250%);
         width: 100%;
-        font-size: 1.8rem !important;
+        font-size: 1.5rem !important;
       }
-      :nth-child(2) {
+      :nth-child(2){
+        top: -70!important;
+        left: -25!important;
+      }
+      :nth-child(3) {
         font-size: 1.2rem !important;
-        transform: translate(-15%, -10%);
+        transform: translateY(-10%)!important;
       }
+     
+
     }
     .product-img-box {
       transform: translateX(-25%);
@@ -978,12 +1109,32 @@ footer {
         margin-right: 50px;
       }
     }
-    #certificateCbd {
-      font-size: 1rem !important;
-      transform: translate(-17%, 600%) !important;
+    #certificateCbd{
+      font-size: 1rem!important;
+      transform: translate(20%,-750%) !important;
+    }
+  }
+  .ashwa{
+    .product-img-box{
+       
+      img{
+        margin-top: 50px;
+        margin-left: -20px;
+        transform: scale(1.5);
+      }
+    }
+    .product-description{
+      :last-child{
+        left: 0!important;
+        top: -45!important;
+        background: white;
+        color: $secondColor;
+      }
     }
   }
 }
+
+
 
 // animations
 
